@@ -53,6 +53,14 @@ app.get('/about', (req, res) => {
   });
 });
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    message: 'This is the projects page of our application',
+    pageTitle: 'Projects page',
+    currentYear: new Date().getFullYear()
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Hey! You have the required error message.'

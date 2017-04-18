@@ -40,24 +40,21 @@ hbs.registerHelper('screamIt', (text)=>{
 app.get('/', (req,res) => {
   res.render('home.hbs',{
     welcomeMessage: 'Welcome to the homepage of my first nodejs application',
-    pageTitle: 'Home page',
-    currentYear: new Date().getFullYear()
+    pageTitle: 'Home page'
   });
 });
 
 app.get('/about', (req, res) => {
   //res.send('About the page');
   res.render('about.hbs', {
-    pageTitle: 'About page',
-    currentYear: new Date().getFullYear()
+    pageTitle: 'About page'
   });
 });
 
 app.get('/projects', (req, res) => {
   res.render('projects.hbs', {
     message: 'This is the projects page of our application',
-    pageTitle: 'Projects page',
-    currentYear: new Date().getFullYear()
+    pageTitle: 'Projects page'
   });
 });
 
